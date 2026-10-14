@@ -1,0 +1,11 @@
+{
+  "project": "IRONCLAD",
+  "status": "archived experiment; no support or updates",
+  "model": "gpt-6.1-sol",
+  "initial_prompt_utc": "2026-10-14T04:01:17Z",
+  "initial_completion_utc": "2026-10-14T04:38:36Z",
+  "initial_minutes_approx": 37,
+  "later_revision_completion_utc": "2026-10-14T05:24:04Z",
+  "upstream_felucca_commit": "1727537624390cc3f9c7dff2456b43b3a8edb005",
+  "public_history_policy": "new source-only history; no inherited release history"
+}

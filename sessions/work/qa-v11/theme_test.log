@@ -1,0 +1,12 @@
+GREY    text 12.4:1, labels 6.5:1, values 16.9:1, selection 10.4:1
+GREEN   text 17.4:1, labels 8.8:1, values 10.5:1, selection 6.9:1
+AMBER   text 17.0:1, labels 8.5:1, values 10.2:1, selection 6.7:1
+ICE     text 16.9:1, labels 8.5:1, values 8.8:1, selection 6.0:1
+VIOLET  text 17.6:1, labels 8.6:1, values 8.6:1, selection 5.9:1
+ROSE    text 18.2:1, labels 9.0:1, values 9.1:1, selection 6.0:1
+PAPER   text 17.5:1, labels 8.6:1, values 14.7:1, selection 9.5:1
+HI-CON  text 20.5:1, labels 9.7:1, values 17.6:1, selection 11.0:1
+NIGHT   text 14.3:1, labels 7.1:1, values 11.9:1, selection 7.6:1
+MONO    text 21.0:1, labels 21.0:1, values 21.0:1, selection 21.0:1
+IRONCLAD text 18.3:1, labels 9.0:1, values 15.2:1, selection 9.5:1
+Palettes: GREY gray, MONO black and white, contrast (worst margin x1.02), blending, ramp cache, font metrics and ellipsis passed.

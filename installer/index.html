@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Archived IRONCLAD installer source</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><strong>ARCHIVED EXPERIMENT. Unreviewed, untested, unsupported. Not intended to be flashed.</strong></header>
+<main><h1>IRONCLAD installer source</h1><p>This source is retained for reading. No firmware is supplied. There is no hosted installer, support or recovery guarantee. If you run this code and flash anything, you do so entirely at your own risk.</p>
+<p id="browser-support">MIDI SysEx requires a compatible browser and secure context.</p>
+<button id="connect">Connect MIDI</button>
+<div id="ports" hidden><label>MIDI input<select id="midi-in"></select></label><label>MIDI output<select id="midi-out"></select></label><button id="identify">Verify selected device</button></div>
+<p id="identity" role="status">No device selected</p><button id="backup" disabled>Export musical backup</button><p>Musical backup is not a stock firmware backup. Stock data uses different formats.</p>
+<h2>External file only</h2><label><input type="radio" name="package" value="file" checked>Use your own local .fwsc file</label><input id="firmware-file" type="file" accept=".fwsc"><p id="package-detail" role="status">No file selected. Nothing is bundled or downloaded.</p>
+<label><input type="checkbox" id="prepared">I have my own stock firmware and saved data backups. This may leave the device unrecoverable. The author cannot help me.</label>
+<button id="install" disabled>Install selected file</button><p id="install-reason" role="status"></p><progress id="progress" max="1" value="0" aria-label="Transfer progress"></progress><p><span id="stage">Idle</span> <span id="percent"></span></p><p id="status" role="status">No operation started.</p><details><summary>Transfer log</summary><pre id="log"></pre></details>
+</main><script type="module" src="js/app.js"></script></body></html>

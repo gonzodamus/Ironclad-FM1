@@ -1,0 +1,90 @@
+o/rel/blink/blink build/bootstrap/mkdeps.com -o o/rel/depend.host -r o/rel/ @o/rel/srcs.txt @o/rel/hdrs.txt 2>/dev/null
+o/rel/blink/blink build/bootstrap/mkdeps.com -o o/rel/depend.i486 -r o/rel/i486/ @o/rel/srcs.txt @o/rel/hdrs.txt 2>/dev/null
+o/rel/blink/blink build/bootstrap/mkdeps.com -o o/rel/depend.m68k -r o/rel/m68k/ @o/rel/srcs.txt @o/rel/hdrs.txt 2>/dev/null
+o/rel/blink/blink build/bootstrap/mkdeps.com -o o/rel/depend.x86_64 -r o/rel/x86_64/ @o/rel/srcs.txt @o/rel/hdrs.txt 2>/dev/null
+o/rel/blink/blink build/bootstrap/mkdeps.com -o o/rel/depend.x86_64-gcc49 -r o/rel/x86_64-gcc49/ @o/rel/srcs.txt @o/rel/hdrs.txt 2>/dev/null
+o/rel/blink/blink build/bootstrap/mkdeps.com -o o/rel/depend.arm -r o/rel/arm/ @o/rel/srcs.txt @o/rel/hdrs.txt 2>/dev/null
+o/rel/blink/blink build/bootstrap/mkdeps.com -o o/rel/depend.aarch64 -r o/rel/aarch64/ @o/rel/srcs.txt @o/rel/hdrs.txt 2>/dev/null
+o/rel/blink/blink build/bootstrap/mkdeps.com -o o/rel/depend.riscv64 -r o/rel/riscv64/ @o/rel/srcs.txt @o/rel/hdrs.txt 2>/dev/null
+o/rel/blink/blink build/bootstrap/mkdeps.com -o o/rel/depend.mips -r o/rel/mips/ @o/rel/srcs.txt @o/rel/hdrs.txt 2>/dev/null
+o/rel/blink/blink build/bootstrap/mkdeps.com -o o/rel/depend.mipsel -r o/rel/mipsel/ @o/rel/srcs.txt @o/rel/hdrs.txt 2>/dev/null
+o/rel/blink/blink build/bootstrap/mkdeps.com -o o/rel/depend.mips64 -r o/rel/mips64/ @o/rel/srcs.txt @o/rel/hdrs.txt 2>/dev/null
+o/rel/blink/blink build/bootstrap/mkdeps.com -o o/rel/depend.mips64el -r o/rel/mips64el/ @o/rel/srcs.txt @o/rel/hdrs.txt 2>/dev/null
+o/rel/blink/blink build/bootstrap/mkdeps.com -o o/rel/depend.s390x -r o/rel/s390x/ @o/rel/srcs.txt @o/rel/hdrs.txt 2>/dev/null
+o/rel/blink/blink build/bootstrap/mkdeps.com -o o/rel/depend.microblaze -r o/rel/microblaze/ @o/rel/srcs.txt @o/rel/hdrs.txt 2>/dev/null
+o/rel/blink/blink build/bootstrap/mkdeps.com -o o/rel/depend.powerpc -r o/rel/powerpc/ @o/rel/srcs.txt @o/rel/hdrs.txt 2>/dev/null
+o/rel/blink/blink build/bootstrap/mkdeps.com -o o/rel/depend.powerpc64le -r o/rel/powerpc64le/ @o/rel/srcs.txt @o/rel/hdrs.txt 2>/dev/null
+cc -pthread -Wl,-no_fixup_chains  o/rel/blink/blink.o o/rel/blink/blink.a  -lz -lm  -o o/rel/blink/blink
+ld: warning: pointer not aligned in '_kWhence'+0x4 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kWhence'+0x1C (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kSigHow'+0x10 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kSocketFamily'+0x4 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kSocketFamily'+0x1C (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kSocketFamily'+0x34 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kSocketFamily'+0x4C (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kSocketType'+0x10 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kClock'+0x4 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kClock'+0x1C (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kClock'+0x34 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kClock'+0x4C (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kClock'+0x64 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kClock'+0x7C (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kResource'+0x10 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kResource'+0x28 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kResource'+0x40 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kResource'+0x58 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kResource'+0x70 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kResource'+0x88 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kResource'+0xA0 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kResource'+0xB8 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kFcntl'+0x10 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kFcntl'+0x28 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kFcntl'+0x40 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kFcntl'+0x58 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kFcntl'+0x70 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kFcntl'+0x88 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kFcntl'+0xA0 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kFlockType'+0x10 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kAccessModes'+0x4 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kAccessModes'+0x1C (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kWaitFlags'+0x10 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kWaitFlags'+0x28 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kWaitFlags'+0x40 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kWaitFlags'+0x58 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kProtFlags'+0x10 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kProtFlags'+0x28 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kProtFlags'+0x40 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kMapFlags'+0x10 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kMapFlags'+0x28 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kMapFlags'+0x40 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kMapFlags'+0x58 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kMapFlags'+0x70 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kMapFlags'+0x88 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kOpenFlags'+0x4 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kOpenFlags'+0x1C (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kOpenFlags'+0x34 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kOpenFlags'+0x4C (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kOpenFlags'+0x64 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kOpenFlags'+0x7C (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kOpenFlags'+0x94 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kOpenFlags'+0xAC (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kOpenFlags'+0xC4 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kAtFlags'+0x10 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kAtFlags'+0x28 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kCloneFlags'+0x4 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kCloneFlags'+0x1C (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kCloneFlags'+0x34 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kCloneFlags'+0x4C (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kCloneFlags'+0x64 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kCloneFlags'+0x7C (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kCloneFlags'+0x94 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kCloneFlags'+0xAC (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kCloneFlags'+0xC4 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kCloneFlags'+0xDC (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kSaFlags'+0x10 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kSaFlags'+0x28 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kSaFlags'+0x40 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kSaFlags'+0x58 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kSaFlags'+0x70 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kSockFlags'+0x10 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))
+ld: warning: pointer not aligned in '_kRenameFlags'+0x10 (/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/blink-stable/o/rel/blink/blink.a[124](strace.o))

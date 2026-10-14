@@ -1,0 +1,42 @@
+regress: voices: budget of 8 across 4 parts: 4 POLY parts, random notes: at most 8 voices active (budget 8), VOICE part at most 4 (cap 4), 791 voices taken, 0 still fading after their block, all free 1.41 s after the note-offs ok
+regress: voices: reuse before the stolen tail fades: same-note retrigger and full local-cap replacement before the fade: at most 8 voices, both MONO parts kept, all released ok
+regress: voices: budget after a live mode change: POLY / UNISON chord -> MONO / LEGATO / UNISON: extra voices reclaimed, leads kept, budget 8 ok
+regress: voices: budget after voice mode changes: POLY -> MONO / LEGATO and lower UNISON cap: at most 8 voices, all four leads kept, all released ok
+regress: voices: note-offs after live voice mode changes: 76 cases: all 16 VCE pairs, both key-up orders and caps 8 / 4; no stale fallback, MONO / LEGATO / UNISON priority leads and fallback preserved ok
+regress: samples: high-rate one-shot ends: 80 one-shot ends, both polarities and full scale, 1x..8x rate: terminal interpolation bounded ok
+regress: voices: a stolen voice fades: 5 takes; largest sample step at a take 669 vs 1192 before it (0.56 x, limit 1.50 x) ok
+regress: voices: MONO keeps its note: MONO part held its note through 868 voices taken from the others: lost in 0 blocks ok
+regress: voices: LEGATO keeps its note: LEGATO part held its note through 868 voices taken from the others: lost in 0 blocks ok
+regress: voices: UNISON keeps its note: UNISON part held its note through 875 voices taken from the others: lost in 0 blocks ok
+regress: voices: VOICE engine cap: VOICE engine, 8 keys: at most 4 voices in POLY, 4 in UNISON (cap 4); freed after release ok
+regress: routing: no hanging notes: 14133 random MIDI / key events on ch 1-4, 5, 10, 16 and the keys, track selection changing, 3 rounds (ROUT CH1-4, SEL, switching): no gate left on, every voice free ok
+regress: CPU cpu/ANALOG/12_IRON_CHUG: 1091 instructions / sample, no baseline (BUDGET_UPDATE=1 adds it)
+regress: CPU cpu/ANALOG/13_DOOM_WALL: 1158 instructions / sample, no baseline (BUDGET_UPDATE=1 adds it)
+regress: CPU cpu/ANALOG/14_RAZOR_LD: 1074 instructions / sample, no baseline (BUDGET_UPDATE=1 adds it)
+regress: CPU cpu/ANALOG/15_SUB_HAMMR: 1038 instructions / sample, no baseline (BUDGET_UPDATE=1 adds it)
+regress: CPU cpu/ANALOG/16_BLACK_ICE: 1414 instructions / sample, no baseline (BUDGET_UPDATE=1 adds it)
+regress: CPU cpu/DRUM/04_BLAST_KIT: 1063 instructions / sample, no baseline (BUDGET_UPDATE=1 adds it)
+regress: CPU cpu/FM6/08_RUST_BASS: 1078 instructions / sample, no baseline (BUDGET_UPDATE=1 adds it)
+regress: CPU cpu/FM6/09_WAR_BELL: 955 instructions / sample, no baseline (BUDGET_UPDATE=1 adds it)
+regress: CPU cpu/FM6/10_CATHEDRAL: 1221 instructions / sample, no baseline (BUDGET_UPDATE=1 adds it)
+regress: CPU cpu/FM6/11_SHRED_FM: 1217 instructions / sample, no baseline (BUDGET_UPDATE=1 adds it)
+regress: CPU cpu/FM6/12_MACHINE: 4 instructions / sample, no baseline (BUDGET_UPDATE=1 adds it)
+regress: CPU, one part with 8 notes held (VOICE 4), heaviest preset per engine (instructions / ns per sample):
+regress:   ANALOG   BLACK ICE        1724 instr   117.8 ns
+regress:   PHASE    WIRE             1718 instr    97.9 ns
+regress:   LOFI     WAVE LEAD         848 instr    48.6 ns
+regress:   SAMPLE   SAX               943 instr    84.1 ns
+regress:   VOICE    CHOIR AAH        1009 instr    70.4 ns
+regress:   TRIO     CHIP CHOIR       1495 instr   107.7 ns
+regress:   WHEEL    FULL ORGAN       1427 instr    87.6 ns
+regress:   GRAIN    SHIMMER           960 instr    59.3 ns
+regress:   PHYS     BOWED METAL      1239 instr   100.0 ns
+regress:   DRUM     BLAST KIT        1373 instr    98.6 ns
+regress:   NOISE    RAIN             1275 instr   112.0 ns
+regress:   FM6      CATHEDRAL        1531 instr   131.0 ns
+regress:   SLICE    STUTTER          1029 instr    64.4 ns
+regress:   idle                       310 instr    20.1 ns
+regress:   idle_drums                 550 instr    35.3 ns
+regress:   3parts_full_drums         1573 instr   111.6 ns
+regress:   idle_click                 331 instr    22.6 ns
+regress: 109 golden renders (0 changed, 0 gone), 0 health failures, 0 voice / routing checks failed, 0 CPU entries over budget (0 notes), 0 crashes; 1.2 s

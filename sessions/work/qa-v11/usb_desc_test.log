@@ -1,0 +1,26 @@
+manufacturer and product expose IRONCLAD with valid UTF-16 descriptor lengths ok
+-- USB descriptors: CDC 1 (presented), UAC 1 (44.1 / 48 kHz), AS first, layout 0
+GET_DESCRIPTOR device                                                    ok
+GET_DESCRIPTOR configuration                                             ok
+misc / IAD: bcdUSB 2.00, class EF 02 01                                  ok
+VID 1209 PID 0001, strings 1 2, one configuration                        ok
+bcdDevice 3.29                                                           ok
+wTotalLength = the bytes sent                                            ok
+descriptor lengths add up to wTotalLength                                ok
+bNumInterfaces 5 = the interfaces, numbered 0..n-1 in order              ok
+each setting has bNumEndpoints endpoints, each on its interface          ok
+endpoint addresses unique (6: MIDI 01 81, CDC 82 03 83, audio 84)        ok
+IADs: audio IF 0-2, CDC IF 3-4, before their first interface             ok
+audio from IF 0, CDC last                                                ok
+audio function: AC, MIDI, AS in a row                                    ok
+AC header 1.00, collection = the audio streaming, then the MIDI interface ok
+AppleUSBAudio (macOS <= 15) parser model reaches the audio streaming interface ok
+UAC_AS_IF (SET_INTERFACE / GET_INTERFACE) = the audio streaming interface ok
+CDC union and call management name the data interface                    ok
+layout 0 = Felucca 1.0 + the 48 kHz rate (if built) + the AC collection order, nothing else ok
+audio input: 2 rate(s) 44100 48000, EP 0x84 196 B                        ok
+   macOS may attach: AppleUSBCDCCompositeDevice (Misc)
+   macOS may attach: AppleUSBAudioComposite (InterfaceAssociationClass)
+   macOS may attach: AppleUSBHostCompositeDevice (InterfaceAssociationClass)
+update path (SysEx on EP1: soft key, M-UPGRADE, frames), console presented ok
+usb_desc: all ok

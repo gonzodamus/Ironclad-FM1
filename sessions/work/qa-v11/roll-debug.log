@@ -1,0 +1,14 @@
+ui: roll: numbers of one shape roll by the sign of the change; names, length, sign changes snap ok
+ui: roll: every page and engine: a name (enum, even ALG 1..8, note, ON/OFF) snaps, numbers roll ok
+ui: roll: a card's value rolls for 9 frames (TUNE 0 -> 1), the value itself at once ok
+ui: roll: the roll's last frame is pixel-identical to the static render        ok
+ui: roll: a mid-roll frame differs from the static render inside the value strip only ok
+QA roll header: enteringok=1 diff=96 outside=60 cardstrip=60 prefixdiff=18 geometry=120,150
+QA after headerprefixandcardprefix=0
+ui: roll: header BPM 120 -> 121 and a card 10 -> 11: only the strip changes, unchanged digits stay put FAIL
+ui: roll: an increase rolls up, a decrease down (-5 -> -6 is down)             ok
+ui: roll: a change mid-roll retargets (from the last value, restarted) and ends static ok
+ui: roll: a change within 40 ms of the last one snaps (a fast turn)            ok
+ui: roll: a sign / length change (0 -> -1) and a name (CLK) snap               ok
+ui: roll: a page, track, palette or engine change and ui.force snap            ok
+ui: roll: MONO roll frames are gray                                            ok

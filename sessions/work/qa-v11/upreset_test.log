@@ -1,0 +1,46 @@
+UP_PUT frame < 640 bytes                       ok
+UP_PUT parses                                  ok
+UP_PUT values (negative v14 too)               ok
+pattern: rest drops flags, tie has no note     ok
+UP_PUT short frame -> args                     ok
+every short prefix rejected without record changes ok
+short optional tail rejected                   ok
+UP_PUT slot 32 -> args                         ok
+UP_PUT bad engine -> args                      ok
+UP_PUT engine 1 (DIGITAL): kept as it is       ok
+  a bank read keeps it engine 1 (its values DIGITAL's) ok
+UP_PUT empty name -> args                      ok
+UP_PUT 13-char name -> args                    ok
+UP_PUT 12-char name ok                         ok
+name shown upper case                          ok
+bank fits one object                           ok
+bank save                                      ok
+bank load: the record is back                  ok
+other slots empty                              ok
+bank 0 never written -> empty                  ok
+banks in 0xDC000..0xDFFFF                      ok
+bank with another record size -> empty         ok
+record with another version -> empty           ok
+a version 3 record (a drum grid) is used       ok
+UP_PUT kind 1: a grid record, accents only on hits ok
+UP_PUT kind 0: a note pattern (version 2)      ok
+UP_PUT short grid rejected, record unchanged   ok
+UP_PUT unknown kind rejected                   ok
+UP_PUT trailing byte rejected (no category; two bytes) ok
+a grid record: bank round trip                 ok
+bank load: PHYS DRUM -> DRUM engine, MEMB kept ok
+UP_PUT of PHYS DRUM -> DRUM engine             ok
+bank load: SAMPLE PERC -> DRUM kit, FLUTE kept ok
+  migrated again: as it is                     ok
+UP_PUT of SAMPLE PERC -> DRUM kit              ok
+np < P_COUNT: mapped by count                  ok
+old record (np 53): SLICER and matrix defaults, E0..E7 kept ok
+old record (np 57): SLICER kept, matrix defaults, E0..E7 kept ok
+v4 / v5 records of 91, 89 and 69 parameters: E0..E7 at P_E0, lane levels and chord keys defaults ok
+np == P_COUNT: as stored                       ok
+steps -> pattern                               ok
+empty sequencer -> empty pattern               ok
+category: UP_PUT's last byte, none = the engine's ok
+category: kept through the bank on flash       ok
+category: a version 3 grid -> 5 with it, values kept; one that cannot be packed keeps none ok
+user preset test passed

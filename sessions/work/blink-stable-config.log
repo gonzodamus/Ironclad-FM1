@@ -1,0 +1,69 @@
+checking for flock... no
+building tool/flock.c... ok
+checking for pie...  no
+checking for -Wl,--image-base=0x23000000...  no
+checking for -Wl,-Ttext-segment=0x23000000...  no
+checking for -Wl,-z,common-page-size=65536,-z,max-page-size=65536... no
+checking for -lm...  yes
+checking for -pthread...  yes
+checking for -lrt...  no
+checking for -fno-common...  yes
+checking for -fno-sanitize=all...  yes
+checking for -fno-align-functions...  yes
+checking for -fno-stack-protector...  yes
+checking for -fomit-frame-pointer...  yes
+checking for -fno-omit-frame-pointer...  yes
+checking for -fno-optimize-sibling-calls...  yes
+checking for -fcf-protection=none...  yes
+checking for zlib...  yes
+checking for libunwind...  no
+checking for stdatomic.h...  yes
+checking for RtlGenRandom()...  no
+checking for dup3()...  no
+checking for getentropy() in unistd.h...  no
+checking for pipe2()...  no
+checking for getrandom()...  no
+checking for epoll_pwait()...  no
+checking for syscall(SYS_getrandom)...  no
+checking for sysctl(KERN_ARND)...  no
+checking for getdomainname()...  no
+checking for SIOCGIFCONF...  yes
+checking for /dev/urandom...  yes
+checking for fork()...  yes
+checking for getentropy() in sys/random.h...  yes
+checking for epoll_pwait2()...  no
+checking for SCM_CREDENTIALS...  no
+checking for sched_getaffinity()...  no
+checking for F_GETOWN_EX...  no
+checking for setresuid()...  no
+checking for sysinfo()...  no
+checking for fexecve()...  no
+checking for strchrnul()...  yes
+checking for memccpy()...  yes
+checking for setgroups()...  yes
+checking for sys/mount.h...  yes
+checking for sync()...  yes
+checking for preadv() and pwritev()...  yes
+checking for realpath()...  yes
+checking for mmap(MAP_ANONYMOUS)...  yes
+checking for sysctl()...  no
+checking for wait4()...  no
+checking for wcwidth()...  no
+checking for seekdir()...  yes
+checking for mkfifoat()...  yes
+checking for setreuid()...  yes
+checking for vasprintf()...  yes
+checking for fdatasync()...  yes
+checking for sendto(0.0.0.0)...  no
+checking for sched_yield()...  yes
+checking for sched.h...  yes
+checking for struct timezone...  yes
+checking for pthread_setcancelstate()...  yes
+checking for clock_settime()...  yes
+checking for mmap(MAP_SHARED)...  yes
+checking for sockaddr::sa_len...  yes
+checking for sockatmark()...  yes
+checking for PTHREAD_PROCESS_SHARED...  yes
+creating config.log
+creating config.mk
+creating config.h

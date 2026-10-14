@@ -1,0 +1,22 @@
+Using already generated headers; BASIC Inter Tight fallback fonts
+Using verified optimized loader object compiled with interpreter (JIT disabled)
+loader: image 8216 B at 0x1c0a800, bss end 0x1c0f510
+loader: ota.bin 6930 B
+clang: error: unable to execute command: Segmentation fault
+clang: error: clang frontend command failed due to signal (use -v to see invocation)
+clang version 4.0.1 () ()
+Target: pi32v2
+Thread model: posix
+InstalledDir: /Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/jieli/jieli-linux-toolchains-20260730.1/pi32v2/bin
+clang: note: diagnostic msg: PLEASE submit a bug report to http://llvm.org/bugs/ and include the crash backtrace, preprocessed source, and associated run script.
+clang: note: diagnostic msg: 
+********************
+
+PLEASE ATTACH THE FOLLOWING FILES TO THE BUG REPORT:
+Preprocessed source(s) and associated run script(s) are located at:
+clang: note: diagnostic msg: /var/folders/pb/8mc69p953dq8m8zkr_xksw180000gn/T/felucca-457974.c
+clang: note: diagnostic msg: /var/folders/pb/8mc69p953dq8m8zkr_xksw180000gn/T/felucca-457974.sh
+clang: note: diagnostic msg: 
+
+********************
+build: pi32v2/bin/clang failed

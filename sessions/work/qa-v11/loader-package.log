@@ -1,0 +1,13 @@
+damaged package (flash.bin CRC) refused, nothing erased  ok
+  rc 0, 2332 requests, 145 sector erases
+install completes                                        ok
+a sector changed in transfer after the check is read again ok
+app area == the new package's flash.bin                  ok
+flash head [0, 0x4000) untouched                         ok
+finish asked (0xF0000000)                                ok
+update records cleared (RAM + flash 0xE4F00, the stock firmware's 0xE8F00) ok
+user data in Felucca's store that looks like a record is kept ok
+no write outside the allowed windows                     ok
+re-run with the same package erases nothing              ok
+foreign key / damaged app head refused, nothing erased   ok
+loader test passed

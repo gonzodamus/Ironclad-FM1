@@ -1,0 +1,26 @@
+diff --git a/blink/syscall.c b/blink/syscall.c
+index 34cc01c..f172e5b 100644
+--- a/blink/syscall.c
++++ b/blink/syscall.c
+@@ -1094,7 +1094,7 @@ static i64 SysBrk(struct Machine *m, i64 addr) {
+   BEGIN_NO_PAGE_FAULTS;
+   LOCK(&m->system->mmap_lock);
+   MEM_LOGF("brk(%#" PRIx64 ") currently %#" PRIx64, addr, m->system->brk);
+-  pagesize = FLAG_pagesize;
++  pagesize = HasLinearMapping() ? FLAG_pagesize : 4096;
+   addr = ROUNDUP(addr, pagesize);
+   if (addr >= kNullSize) {
+     if (addr > m->system->brk) {
+diff --git a/blink/tunables.h b/blink/tunables.h
+index a9f19f8..2ff8ecf 100644
+--- a/blink/tunables.h
++++ b/blink/tunables.h
+@@ -31,7 +31,7 @@
+ #define kStackTop      0x500000000000
+ 
+ #define kRealSize  (16 * 1024 * 1024)  // size of ram for real mode
+-#define kStackSize (8 * 1024 * 1024)   // size of stack for user mode
++#define kStackSize (64 * 1024 * 1024)   // size of stack for user mode
+ #define kNullSize  (2 * 1024 * 1024)   // minimum user mode image address
+ 
+ #define kMinBlinkFd   123  // fds owned by the vm start here

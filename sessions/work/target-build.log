@@ -1,0 +1,32 @@
+/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/venv/lib/python3.9/site-packages/PIL/ImageFont.py:259: UserWarning: Raqm layout was requested, but Raqm is not available. Falling back to basic layout.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/felucca/tools/gen_aa_font.py", line 261, in <module>
+    main()
+  File "/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/felucca/tools/gen_aa_font.py", line 250, in main
+    text, c = emit(f, a.tracking, a.gamma, a.kern_min)
+  File "/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/felucca/tools/gen_aa_font.py", line 167, in emit
+    r = ar.raster_font(font, px, chars, tracking if ftrack is None else ftrack, gamma, True, kern_min, phases)
+  File "/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/felucca/tools/aa_raster.py", line 126, in raster_font
+    nat[ch] = adv[ch] = font_hi.getlength(ch, features=f) / SS + tracking * px
+  File "/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/venv/lib/python3.9/site-packages/PIL/ImageFont.py", line 390, in getlength
+    return self.font.getlength(text, mode, direction, features, language) / 64
+KeyError: 'setting text direction, language or font features is not supported without libraqm'
+2 extra bytes in post.stringData array
+2 extra bytes in post.stringData array
+/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/venv/lib/python3.9/site-packages/PIL/ImageFont.py:259: UserWarning: Raqm layout was requested, but Raqm is not available. Falling back to basic layout.
+  warnings.warn(
+icons: x_oct_up: symbol_pitch_up not in the font yet, using control_arrow_up
+icons: x_oct_dn: symbol_pitch_down not in the font yet, using control_arrow_down
+icons 12px: 105 cells, 4237 B
+icons 16px: 39 cells, 2590 B
+icons 24px: 6 cells, 667 B
+icons code: 57 B
+icons total 7551 B -> /Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/felucca/build/gen/ui_icons.h   (87 legacy names + 36 new)
+/Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/venv/lib/python3.9/site-packages/PIL/ImageFont.py:259: UserWarning: Raqm layout was requested, but Raqm is not available. Falling back to basic layout.
+  warnings.warn(
+keycaps: 29 pills, data 4936 B + table 232 B; knob arcs 584 B = 5752 B -> /Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/felucca/build/gen/ui_keycaps.h
+fm6 patches: 8 -> /Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/felucca/build/gen/felucca_fm6.h
+generated waves into /Users/dick/Documents/Codex/2026-10-14/connected-to-this-computer-is-an/work/felucca/build/genwav
+samples: 5 sets, 11 zones, 126244 B ADPCM, SLICE BREAK 44100 samples, SLICE PIANO (shared) 16537 samples (cached)
+build: gen_aa_font.py failed

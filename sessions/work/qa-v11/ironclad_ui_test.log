@@ -1,0 +1,30 @@
+ui: IRON CHUG                                                                  ok
+ui: DOOM WALL                                                                  ok
+ui: RAZOR LD                                                                   ok
+ui: SUB HAMMR                                                                  ok
+ui: BLACK ICE                                                                  ok
+ui: RUST BASS                                                                  ok
+ui: WAR BELL                                                                   ok
+ui: CATHEDRAL                                                                  ok
+ui: SHRED FM                                                                   ok
+ui: MACHINE                                                                    ok
+ui: BLAST KIT                                                                  ok
+ui: edited IRONCLAD FM6 algorithm/operator voice: OWN, distinct, project + user preset round trips ok
+ui: IRONCLAD FM6 SLOT F1 honors selected legacy voice                          ok
+ui: IRONCLAD FM6 SLOT OWN restores edited operator voice                       ok
+ui: edited IRONCLAD FM6 algorithm/operator voice: OWN, distinct, project + user preset round trips ok
+ui: IRONCLAD FM6 SLOT F1 honors selected legacy voice                          ok
+ui: IRONCLAD FM6 SLOT OWN restores edited operator voice                       ok
+ui: edited IRONCLAD FM6 algorithm/operator voice: OWN, distinct, project + user preset round trips ok
+ui: IRONCLAD FM6 SLOT F1 honors selected legacy voice                          ok
+ui: IRONCLAD FM6 SLOT OWN restores edited operator voice                       ok
+ui: edited IRONCLAD FM6 algorithm/operator voice: OWN, distinct, project + user preset round trips ok
+ui: IRONCLAD FM6 SLOT F1 honors selected legacy voice                          ok
+ui: IRONCLAD FM6 SLOT OWN restores edited operator voice                       ok
+ui: edited IRONCLAD FM6 algorithm/operator voice: OWN, distinct, project + user preset round trips ok
+ui: IRONCLAD FM6 SLOT F1 honors selected legacy voice                          ok
+ui: IRONCLAD FM6 SLOT OWN restores edited operator voice                       ok
+ui: METAL insert survives project save / restore                               ok
+ui: METAL insert survives user-preset save / restore; mix LEVEL kept           ok
+ui: loading an original preset clears METAL and keeps mix LEVEL                ok
+ironclad-ui: ALL FOCUSED CHECKS PASSED

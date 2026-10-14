@@ -1,0 +1,15 @@
+robust: SLICE material of 16 overlapping zones: 162816 samples (the slot holds 162816)
+editor: 16 overlapping zones: the SLICE scan is at most the slot's size        ok
+editor: a slot with a malformed zone: unusable, no zone of it left behind      ok
+editor: the same slot made valid scans again                                   ok
+editor: a captured project packs and imports                                   ok
+editor: FUN8 with an engine past the last (a valid hash) is not a project      ok
+editor: FUN5 with an engine past the last is not a project                     ok
+editor: restoring a project with an engine past the last is refused, nothing changes ok
+editor: a retained FUN5 RAM slot loads bounded (velocity 200 -> inside 0..127) ok
+editor: a bank from flash: a note pattern's note inside 0..127, its flags inside their fields ok
+editor: a bank from flash: a drum grid's accents only on its hits              ok
+editor: a malformed SMP_END is refused without stopping the transport          ok
+editor: a malformed BACKUP_PUT is refused without stopping the transport       ok
+editor: BACKUP_PUT data without a session: refused, the transport runs         ok
+robustness test passed

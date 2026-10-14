@@ -1,0 +1,16 @@
+ironclad: METAL is appended at stored insert type 9: PASS
+ironclad: METAL MIX 0 preserves the input sample-for-sample: PASS
+ironclad: maximum gain from fresh silence produces exact silence: PASS
+ironclad: corner DRIVE=0 CAB=0 LEVEL=0 peak=51248 DC=0.00 tail=0
+ironclad: corner DRIVE=0 CAB=0 LEVEL=127 peak=73992 DC=4.28 tail=0
+ironclad: corner DRIVE=0 CAB=127 LEVEL=0 peak=51248 DC=0.00 tail=0
+ironclad: corner DRIVE=0 CAB=127 LEVEL=127 peak=76478 DC=4.09 tail=0
+ironclad: corner DRIVE=127 CAB=0 LEVEL=0 peak=51248 DC=0.00 tail=0
+ironclad: corner DRIVE=127 CAB=0 LEVEL=127 peak=73879 DC=4.26 tail=0
+ironclad: corner DRIVE=127 CAB=127 LEVEL=0 peak=51248 DC=0.00 tail=0
+ironclad: corner DRIVE=127 CAB=127 LEVEL=127 peak=80013 DC=4.10 tail=0
+ironclad: all 8 parameter corners stay below internal headroom (262144): PASS
+ironclad: all corners have DC below 1500 internal sample units: PASS
+ironclad: all corners settle below 16 units after one second of silence: PASS
+ironclad: worst peak=80013, DC=4.28, tail=0
+ironclad: ALL FOCUSED CHECKS PASSED

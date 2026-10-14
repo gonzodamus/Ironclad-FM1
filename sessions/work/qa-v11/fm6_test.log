@@ -1,0 +1,52 @@
+fm6: algorithms: the classic carrier counts of all 32 (operators on the output bus)             ok
+fm6: algorithms: each of the 32 sounds with every operator at full level                        ok
+fm6: algorithms: more carriers, more level (1 .. 6)                                             ok
+fm6: envelope: attack -> L1, decay -> L2 -> L3, held while the key is down, then the release (in order) ok
+fm6: envelope: the voice ends after the release (engine done), not while the key is held        ok
+fm6: envelope: attack rate 60 slower than 80 slower than 99; 99 within a block or two           ok
+fm6: envelope: attack to L1 in 78 / 8 / 1 blocks (rates 60 / 80 / 99), L1 reached at block 77
+fm6: envelope: a decayed note ends while its key is held (L3 0), its voice free                 ok
+fm6: retrigger: a note from silence renders the same samples twice                              ok
+fm6: retrigger: the same key again while it sounds: no step larger than the tone's own          ok
+fm6: factory patches C1..C7, velocity 30 / 127: peak 22850 (VOICE_FS 24000), |mean| at most 5.7
+fm6: no clipping: every factory patch, C1..C7, velocity 30 and 127: a voice below 2 x VOICE_FS  ok
+fm6: no DC: |mean| below 1 % of VOICE_FS                                                        ok
+fm6: MLVL -40 / 0 / +40: centroid 131 / 146 / 793 Hz
+fm6: MLVL: + brighter, - darker                                                                 ok
+fm6: MRAT 0 / +3: centroid 146 / 203 Hz
+fm6: MRAT: + raises the modulators' ratios (brighter)                                           ok
+fm6: MEG 0 / +50: centroid at 0.5 s 132 / 179 Hz
+fm6: MEG: + the modulators decay slower (brighter later)                                        ok
+fm6: VMOD 0 / +5: centroid ratio vel 127 / 40 1.13 / 1.45
+fm6: VMOD: + velocity moves the brightness more                                                 ok
+fm6: FB 0 / +6 (OP6 alone): centroid 131 / 11044 Hz
+fm6: FB: + more feedback (brighter)                                                             ok
+fm6: ALG: 1..32 replaces the patch's algorithm, PAT (0) keeps it                                ok
+fm6: DTUN 0 / 127 (3 carriers): level swing over 50 ms windows 1.012 / 18.403
+fm6: DTUN: the carriers apart: they beat                                                        ok
+fm6: SLOT OWN: the track's patch stays (nothing reloads)                                        ok
+fm6: SLOT F5 loads the fifth factory patch (main loop)                                          ok
+fm6: SLOT back to OWN: the own patch again                                                      ok
+fm6: SLOT: F1..F8, OWN, then B1..B32 (1.4.1, the voice bank), nothing past it                   ok
+fm6: SLOT B3 with no bank: refused (SLOT back to OWN), the patch unchanged                      ok
+fm6: fm6_adopt: a factory patch unchanged shows its slot                                        ok
+fm6: fm6_adopt: edited, it is the track's own (OWN)                                             ok
+fm6: fm6_adopt: an old B slot holding factory F7 shows F7                                       ok
+fm6: pack(unpack(x)) == x: the factory patches and the init voice (generator and C agree)       ok
+fm6: any 128 bytes unpack into range (2000 random records)                                      ok
+fm6: a 32-voice bank SysEx: checksum, its 32 records back as they were                          ok
+fm6: a single-voice SysEx (155 bytes): back to the same packed record                           ok
+fm6: voices: 8 keys in POLY: 6 voices (the engine's cap)                                        ok
+fm6: voices: all free some seconds after the release (the operator envelopes end them)          ok
+fm6: cost, host instructions per sample and voice (6 voices held; device estimate 1.7 % per 100):
+fm6:   TINE EP        167  ~2.84 %
+fm6:   BELL           163  ~2.77 %
+fm6:   FM BASS        131  ~2.23 %
+fm6:   BRASS          177  ~3.01 %
+fm6:   PAD            176  ~3.00 %
+fm6:   MARIMBA         34  ~0.57 %
+fm6:   ORGAN          172  ~2.92 %
+fm6:   PLUCK           95  ~1.62 %
+fm6:   (6 carriers)   179  ~3.05 %
+fm6: cost: at most 179 instructions a sample and voice (~3.0 % on the device, 6 voices ~18 %; limit 265) ok
+fm6_test: all checks ok

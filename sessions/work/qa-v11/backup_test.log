@@ -1,0 +1,56 @@
+backup: LIST captures the runtime: 13 objects (id 8 empty, id 9 the FM6 patches), runtime 3840 B (FUN10) ok
+backup: an empty project slot lists as length 0                                  ok
+backup: GET of the runtime copy                                                  ok
+backup: a project save after LIST reused the staging RAM: GET of the runtime is stale (5) ok
+backup: a new LIST makes it readable again                                       ok
+backup: a USB reset after LIST: GET is stale (5)                                 ok
+backup: settings with SPEAKER BASS+ restore                                      ok
+backup: settings of an older backup restore with the palette migrated            ok
+backup: settings with an unknown SPEAKER value are refused, nothing written      ok
+backup: settings with HOLD 0.6 s restore                                         ok
+backup: settings of an older backup restore with HOLD 0.4 s                      ok
+backup: settings with an unknown HOLD value are refused, nothing written         ok
+backup: settings with LEDS INV restore                                           ok
+backup: settings of an older backup restore with LEDS DIM                        ok
+backup: settings with LEDS DIM LO restore                                        ok
+backup: settings with LEDS OFF restore                                           ok
+backup: settings with an unknown LEDS value are refused, nothing written         ok
+backup: a wrong CRC is refused before any write                                  ok
+backup: an unknown object id is refused                                          ok
+backup: a project of the wrong length is refused                                 ok
+backup: settings of the wrong length are refused                                 ok
+backup: a chunk without a begin is refused (5)                                   ok
+backup: a chunk at the wrong offset is refused                                   ok
+backup: a chunk for another object is refused (5)                                ok
+backup: a chunk past the length is refused                                       ok
+backup: commit before all bytes arrived is refused                               ok
+backup: a USB reset during PUT ends it (5)                                       ok
+backup: 16 s without a chunk ends the PUT (5)                                    ok
+backup: a project save during PUT (the staging RAM) ends it (5)                  ok
+backup: PUT while starting PLAY is refused (3)                                   ok
+backup: a FUN10 project restores into slot 3 (flash and RAM)                     ok
+backup: a FUN8 project (1.0.x) restores as FUN10 into slot 2, E0 at P_E0, lane levels 100 % ok
+backup: a FUN9 project (1.1) restores as FUN10 into slot 3: its 64 records, the lanes, LFO 2 / QUANTIZE defaults ok
+backup: a FUN6 project restores as FUN10, bounded, its E0 at P_E0                ok
+backup: the user presets of an old archive (id 6) restore                        ok
+backup: an old archive's FM6 bank (id 8) is taken (0)                            ok
+backup:   .. its B3 patch is now the B3 presets' own (slots 1 and 5)             ok
+backup:   .. an F slot, an empty B slot and a DRUM sound get none (factory / init / no patch, as before) ok
+backup:   .. written to flash (the user presets' FM6 patches)                    ok
+backup:   .. and the B3 preset loads it, SLOT OWN                                ok
+backup:   .. the F2 preset loads the factory patch, SLOT F2                      ok
+backup: a restore of id 8 twice moves nothing more (idempotent)                  ok
+backup: an empty id 8 (a 1.0.3 archive) is taken and ignored                     ok
+backup: an FM6 bank with a byte above 127 is refused (2)                         ok
+backup: id 8 lists empty, id 9 with the patches' length                          ok
+backup: id 9 restores the user presets' FM6 patches (flash and RAM)              ok
+backup: an id 9 of another layout is refused (2), the patches kept               ok
+backup: an id 9 of the wrong size is refused at begin (1)                        ok
+backup: an id 10 is refused (1)                                                  ok
+backup: a flash error on commit (4) keeps the slot's RAM copy                    ok
+backup: an empty project object clears the slot                                  ok
+backup: a project whose own hash fails is refused                                ok
+backup: the runtime object restores the tracks                                   ok
+backup: a bank with a future record version restores byte for byte               ok
+backup: a bank with the wrong slot count is refused                              ok
+backup test passed

@@ -1,0 +1,701 @@
+
+========================================================================
+checking for pie... 
+========================================================================
+
+cc -fpie -g -O2 -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pie -Werror -o o/tool/config/noop tool/config/noop.c
+nice: setpriority: Operation not permitted
+clang: error: argument unused during compilation: '-pie' [-Werror,-Wunused-command-line-argument]
+exit code 1
+
+========================================================================
+checking for -Wl,--image-base=0x23000000... 
+========================================================================
+
+cc -g -O2 -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -Wl,--image-base=0x23000000 -Werror -o o/tool/config/noop tool/config/noop.c
+nice: setpriority: Operation not permitted
+ld: unknown options: --image-base=0x23000000 
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+exit code 1
+
+========================================================================
+checking for -Wl,-Ttext-segment=0x23000000... 
+========================================================================
+
+cc -g -O2 -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -Wl,-Ttext-segment=0x23000000 -Werror -o o/tool/config/noop tool/config/noop.c
+nice: setpriority: Operation not permitted
+ld: unknown options: -Ttext-segment=0x23000000 
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+exit code 1
+
+========================================================================
+checking for -Wl,-z,common-page-size=65536,-z,max-page-size=65536...
+========================================================================
+
+cc -g -O2 -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -Wl,-z,common-page-size=65536,-z,max-page-size=65536 -Werror -o o/tool/config/noop tool/config/noop.c
+nice: setpriority: Operation not permitted
+ld: unknown options: -z -z 
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+exit code 1
+
+========================================================================
+checking for -lm... 
+========================================================================
+
+cc -g -O2 -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -Werror -o o/tool/config/lm tool/config/lm.c -lm
+nice: setpriority: Operation not permitted
+o/tool/config/lm
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for -pthread... 
+========================================================================
+
+cc -pthread -g -O2 -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/pthread tool/config/pthread.c -lm
+nice: setpriority: Operation not permitted
+o/tool/config/pthread
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for -lrt... 
+========================================================================
+
+cc -pthread -g -O2 -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/lrt tool/config/lrt.c -lrt -lm
+nice: setpriority: Operation not permitted
+ld: library 'rt' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+exit code 1
+
+========================================================================
+checking for -fno-common... 
+========================================================================
+
+cc -fno-common -pthread -g -O2 -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/noop tool/config/noop.c -lm
+nice: setpriority: Operation not permitted
+o/tool/config/noop
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for -fno-sanitize=all... 
+========================================================================
+
+cc -fno-sanitize=all -fno-common -pthread -g -O2 -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/noop tool/config/noop.c -lm
+nice: setpriority: Operation not permitted
+o/tool/config/noop
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for -fno-align-functions... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/noop tool/config/noop.c -lm
+nice: setpriority: Operation not permitted
+o/tool/config/noop
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for -fno-stack-protector... 
+========================================================================
+
+cc -fno-stack-protector -fno-align-functions -fno-common -pthread -g -O2 -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/noop tool/config/noop.c -lm
+nice: setpriority: Operation not permitted
+o/tool/config/noop
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for -fomit-frame-pointer... 
+========================================================================
+
+cc -fomit-frame-pointer -fno-align-functions -fno-common -pthread -g -O2 -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/noop tool/config/noop.c -lm
+nice: setpriority: Operation not permitted
+o/tool/config/noop
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for -fno-omit-frame-pointer... 
+========================================================================
+
+cc -fno-omit-frame-pointer -fno-align-functions -fno-common -pthread -g -O2 -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/noop tool/config/noop.c -lm
+nice: setpriority: Operation not permitted
+o/tool/config/noop
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for -fno-optimize-sibling-calls... 
+========================================================================
+
+cc -fno-optimize-sibling-calls -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/noop tool/config/noop.c -lm
+nice: setpriority: Operation not permitted
+o/tool/config/noop
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for -fcf-protection=none... 
+========================================================================
+
+cc -fcf-protection=none -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/noop tool/config/noop.c -lm
+nice: setpriority: Operation not permitted
+o/tool/config/noop
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for zlib... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/zlib tool/config/zlib.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/zlib
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for libunwind... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/libunwind tool/config/libunwind.c -lunwind -llzma -lz -lm
+nice: setpriority: Operation not permitted
+ld: library 'unwind' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+exit code 1
+
+========================================================================
+checking for stdatomic.h... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/stdatomic tool/config/stdatomic.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/stdatomic
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for RtlGenRandom()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/rtlgenrandom tool/config/rtlgenrandom.c -lz -lm
+nice: setpriority: Operation not permitted
+tool/config/rtlgenrandom.c:5:10: fatal error: 'w32api/_mingw.h' file not found
+    5 | #include <w32api/_mingw.h>
+      |          ^~~~~~~~~~~~~~~~~
+1 error generated.
+exit code 1
+
+========================================================================
+checking for getentropy() in unistd.h... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/getentropy tool/config/getentropy.c -lz -lm
+nice: setpriority: Operation not permitted
+tool/config/getentropy.c:17:10: error: call to undeclared function 'getentropy'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   17 |     rc = getentropy(x, sizeof(x));
+      |          ^
+1 error generated.
+exit code 1
+
+========================================================================
+checking for pipe2()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/pipe2 tool/config/pipe2.c -lz -lm
+nice: setpriority: Operation not permitted
+tool/config/pipe2.c:7:7: error: call to undeclared function 'pipe2'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    7 |   if (pipe2(fds, 0)) return 1;
+      |       ^
+tool/config/pipe2.c:7:7: note: did you mean 'pipe'?
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h:474:6: note: 'pipe' declared here
+  474 | int      pipe(int [2]);
+      |          ^
+1 error generated.
+exit code 1
+
+========================================================================
+checking for dup3()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/dup3 tool/config/dup3.c -lz -lm
+nice: setpriority: Operation not permitted
+tool/config/dup3.c:12:7: error: call to undeclared function 'dup3'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   12 |   if (dup3(3, 4, 0) != 4) return 3;
+      |       ^
+1 error generated.
+exit code 1
+
+========================================================================
+checking for epoll_pwait()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/epoll_pwait1 tool/config/epoll_pwait1.c -lz -lm
+nice: setpriority: Operation not permitted
+tool/config/epoll_pwait1.c:2:10: fatal error: 'sys/epoll.h' file not found
+    2 | #include <sys/epoll.h>
+      |          ^~~~~~~~~~~~~
+1 error generated.
+exit code 1
+
+========================================================================
+checking for getrandom()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/getrandom tool/config/getrandom.c -lz -lm
+nice: setpriority: Operation not permitted
+tool/config/getrandom.c:12:3: error: unknown type name 'ssize_t'; did you mean 'size_t'?
+   12 |   ssize_t rc;
+      |   ^~~~~~~
+      |   size_t
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h:18:23: note: 'size_t' declared here
+   18 | typedef __SIZE_TYPE__ size_t;
+      |                       ^
+tool/config/getrandom.c:17:10: error: call to undeclared function 'getrandom'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   17 |     rc = getrandom(x, BYTES, 0);
+      |          ^
+2 errors generated.
+exit code 1
+
+========================================================================
+checking for syscall(SYS_getrandom)... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/sys_getrandom tool/config/sys_getrandom.c -lz -lm
+nice: setpriority: Operation not permitted
+tool/config/sys_getrandom.c:18:10: error: 'syscall' is deprecated: first deprecated in macOS 10.12 - syscall(2) is unsupported; please switch to a supported interface. For SYS_kdebug_trace use kdebug_signpost(). [-Werror,-Wdeprecated-declarations]
+   18 |     rc = syscall(SYS_getrandom, x, BYTES, 0);
+      |          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h:744:6: note: 'syscall' has been explicitly marked deprecated here
+  744 | int      syscall(int, ...);
+      |          ^
+tool/config/sys_getrandom.c:18:18: error: use of undeclared identifier 'SYS_getrandom'
+   18 |     rc = syscall(SYS_getrandom, x, BYTES, 0);
+      |                  ^
+2 errors generated.
+exit code 1
+
+========================================================================
+checking for sysctl(KERN_ARND)... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/kern_arnd tool/config/kern_arnd.c -lz -lm
+nice: setpriority: Operation not permitted
+tool/config/kern_arnd.c:33:27: error: use of undeclared identifier 'KERN_ARND'
+   33 |   int mib[2] = {CTL_KERN, KERN_ARND};
+      |                           ^
+1 error generated.
+exit code 1
+
+========================================================================
+checking for getdomainname()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/getdomainname tool/config/getdomainname.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/getdomainname
+nice: setpriority: Operation not permitted
+exit code 1
+
+========================================================================
+checking for /dev/urandom... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/dev_urandom tool/config/dev_urandom.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/dev_urandom
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for SIOCGIFCONF... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/siocgifconf tool/config/siocgifconf.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/siocgifconf
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for fork()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/fork tool/config/fork.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/fork
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for getentropy() in sys/random.h... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/sys_getentropy tool/config/sys_getentropy.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/sys_getentropy
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for epoll_pwait2()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/epoll_pwait2 tool/config/epoll_pwait2.c -lz -lm
+nice: setpriority: Operation not permitted
+tool/config/epoll_pwait2.c:1:10: fatal error: 'sys/epoll.h' file not found
+    1 | #include <sys/epoll.h>
+      |          ^~~~~~~~~~~~~
+1 error generated.
+exit code 1
+
+========================================================================
+checking for SCM_CREDENTIALS... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/scm_credentials tool/config/scm_credentials.c -lz -lm
+nice: setpriority: Operation not permitted
+tool/config/scm_credentials.c:6:16: error: variable has incomplete type 'struct ucred'
+    6 |   struct ucred ucred;
+      |                ^
+tool/config/scm_credentials.c:6:10: note: forward declaration of 'struct ucred'
+    6 |   struct ucred ucred;
+      |          ^
+tool/config/scm_credentials.c:7:15: error: use of undeclared identifier 'SCM_CREDENTIALS'
+    7 |   ucred.pid = SCM_CREDENTIALS;
+      |               ^
+tool/config/scm_credentials.c:8:15: error: use of undeclared identifier 'SCM_CREDENTIALS'
+    8 |   ucred.uid = SCM_CREDENTIALS;
+      |               ^
+tool/config/scm_credentials.c:9:15: error: use of undeclared identifier 'SCM_CREDENTIALS'
+    9 |   ucred.gid = SCM_CREDENTIALS;
+      |               ^
+4 errors generated.
+exit code 1
+
+========================================================================
+checking for sched_getaffinity()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/sched_getaffinity tool/config/sched_getaffinity.c -lz -lm
+nice: setpriority: Operation not permitted
+tool/config/sched_getaffinity.c:6:3: error: use of undeclared identifier 'cpu_set_t'
+    6 |   cpu_set_t cs;
+      |   ^
+tool/config/sched_getaffinity.c:7:3: error: call to undeclared function 'CPU_ZERO'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    7 |   CPU_ZERO(&cs);
+      |   ^
+tool/config/sched_getaffinity.c:7:13: error: use of undeclared identifier 'cs'
+    7 |   CPU_ZERO(&cs);
+      |             ^
+tool/config/sched_getaffinity.c:8:8: error: call to undeclared function 'sched_getaffinity'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    8 |   rc = sched_getaffinity(0, sizeof(cs), &cs);
+      |        ^
+tool/config/sched_getaffinity.c:8:36: error: use of undeclared identifier 'cs'
+    8 |   rc = sched_getaffinity(0, sizeof(cs), &cs);
+      |                                    ^
+tool/config/sched_getaffinity.c:8:42: error: use of undeclared identifier 'cs'
+    8 |   rc = sched_getaffinity(0, sizeof(cs), &cs);
+      |                                          ^
+tool/config/sched_getaffinity.c:11:8: error: call to undeclared function 'CPU_COUNT'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   11 |   if (!CPU_COUNT(&cs)) return 3;  // system call broken
+      |        ^
+tool/config/sched_getaffinity.c:11:19: error: use of undeclared identifier 'cs'
+   11 |   if (!CPU_COUNT(&cs)) return 3;  // system call broken
+      |                   ^
+8 errors generated.
+exit code 1
+
+========================================================================
+checking for F_GETOWN_EX... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/f_getown_ex tool/config/f_getown_ex.c -lz -lm
+nice: setpriority: Operation not permitted
+tool/config/f_getown_ex.c:6:7: error: use of undeclared identifier 'F_GETOWN_EX'
+    6 |       F_GETOWN_EX,   //
+      |       ^
+tool/config/f_getown_ex.c:7:7: error: use of undeclared identifier 'F_SETOWN_EX'
+    7 |       F_SETOWN_EX,   //
+      |       ^
+tool/config/f_getown_ex.c:8:7: error: use of undeclared identifier 'F_OWNER_TID'
+    8 |       F_OWNER_TID,   //
+      |       ^
+tool/config/f_getown_ex.c:9:7: error: use of undeclared identifier 'F_OWNER_PID'
+    9 |       F_OWNER_PID,   //
+      |       ^
+tool/config/f_getown_ex.c:10:7: error: use of undeclared identifier 'F_OWNER_PGRP'
+   10 |       F_OWNER_PGRP,  //
+      |       ^
+5 errors generated.
+exit code 1
+
+========================================================================
+checking for setresuid()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/setresuid tool/config/setresuid.c -lz -lm
+nice: setpriority: Operation not permitted
+tool/config/setresuid.c:5:12: error: call to undeclared function 'setresuid'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    5 |   int rc = setresuid(-1, -1, -1);  // noop by definition
+      |            ^
+tool/config/setresuid.c:5:12: note: did you mean 'setreuid'?
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h:599:6: note: 'setreuid' declared here
+  599 | int      setreuid(uid_t, uid_t) __DARWIN_ALIAS(setreuid);
+      |          ^
+1 error generated.
+exit code 1
+
+========================================================================
+checking for sysinfo()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/sysinfo tool/config/sysinfo.c -lz -lm
+nice: setpriority: Operation not permitted
+tool/config/sysinfo.c:2:10: fatal error: 'sys/sysinfo.h' file not found
+    2 | #include <sys/sysinfo.h>
+      |          ^~~~~~~~~~~~~~~
+1 error generated.
+exit code 1
+
+========================================================================
+checking for fexecve()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/fexecve tool/config/fexecve.c -lz -lm
+nice: setpriority: Operation not permitted
+tool/config/fexecve.c:7:3: error: call to undeclared function 'fexecve'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    7 |   fexecve(0, args, envs);
+      |   ^
+tool/config/fexecve.c:7:3: note: did you mean 'execve'?
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h:449:6: note: 'execve' declared here
+  449 | int      execve(const char * __file, char *_LIBC_CSTR const *_LIBC_NULL_TERMINATED __argv, char *_LIBC_CSTR const *_LIBC_NULL_TERMINATED __envp) __WATCHOS_PROHIBITED __TVOS_PROHIBITED;
+      |          ^
+1 error generated.
+exit code 1
+
+========================================================================
+checking for setgroups()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/setgroups tool/config/setgroups.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/setgroups
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for sysctl()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/sysctl tool/config/sysctl.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/sysctl
+nice: setpriority: Operation not permitted
+exit code 1
+
+========================================================================
+checking for wait4()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/wait4 tool/config/wait4.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/wait4
+nice: setpriority: Operation not permitted
+exit code 2
+
+========================================================================
+checking for wcwidth()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/wcwidth tool/config/wcwidth.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/wcwidth
+nice: setpriority: Operation not permitted
+exit code 3
+
+========================================================================
+checking for strchrnul()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/strchrnul tool/config/strchrnul.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/strchrnul
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for sys/mount.h... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/sys_mount_h tool/config/sys_mount_h.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/sys_mount_h
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for memccpy()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/memccpy tool/config/memccpy.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/memccpy
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for sync()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/sync tool/config/sync.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/sync
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for preadv() and pwritev()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/preadv tool/config/preadv.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/preadv
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for realpath()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/realpath tool/config/realpath.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/realpath
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for mmap(MAP_ANONYMOUS)... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/map_anonymous tool/config/map_anonymous.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/map_anonymous
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for sendto(0.0.0.0)... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/sendto_zero tool/config/sendto_zero.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/sendto_zero
+nice: setpriority: Operation not permitted
+exit code 2
+
+========================================================================
+checking for seekdir()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/seekdir tool/config/seekdir.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/seekdir
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for mkfifoat()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/mkfifoat tool/config/mkfifoat.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/mkfifoat
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for setreuid()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/setreuid tool/config/setreuid.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/setreuid
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for vasprintf()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/vasprintf tool/config/vasprintf.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/vasprintf
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for fdatasync()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/fdatasync tool/config/fdatasync.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/fdatasync
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for sched_yield()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/sched_yield tool/config/sched_yield.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/sched_yield
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for sched.h... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/sched_h tool/config/sched_h.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/sched_h
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for struct timezone... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/struct_timezone tool/config/struct_timezone.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/struct_timezone
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for pthread_setcancelstate()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/pthread_setcancelstate tool/config/pthread_setcancelstate.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/pthread_setcancelstate
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for clock_settime()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/clock_settime tool/config/clock_settime.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/clock_settime
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for mmap(MAP_SHARED)... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/map_shared tool/config/map_shared.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/map_shared
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for sockaddr::sa_len... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/sa_len tool/config/sa_len.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/sa_len
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for sockatmark()... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/sockatmark tool/config/sockatmark.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/sockatmark
+nice: setpriority: Operation not permitted
+
+========================================================================
+checking for PTHREAD_PROCESS_SHARED... 
+========================================================================
+
+cc -fno-align-functions -fno-common -pthread -g -O2 -fno-omit-frame-pointer -fno-optimize-sibling-calls -fcf-protection=none -D_FILE_OFFSET_BITS=64 -D_DARWIN_C_SOURCE -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_GNU_SOURCE -pthread -Werror -o o/tool/config/pthread_process_shared tool/config/pthread_process_shared.c -lz -lm
+nice: setpriority: Operation not permitted
+o/tool/config/pthread_process_shared
+nice: setpriority: Operation not permitted
